@@ -44,3 +44,11 @@ form button:hover {
 form button:active {
   color:black;
 }
+p {
+  text-align: center;
+  margin: 100px auto 50px;
+  font-weight: 600;
+  font-size: 3.0rem;
+  color: rgb(3, 33, 255);
+  text-decoration: underline;
+}
