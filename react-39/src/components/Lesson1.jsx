@@ -1,5 +1,6 @@
 import React from 'react';
 import './Lesson1.css';
+import Lesson1Child from './Lesson1Child';
 
 class Lesson1 extends React.Component {
   constructor(props) {
@@ -63,6 +64,7 @@ class Lesson1 extends React.Component {
           <button type="submit" onClick={this.incrementNumber}>Add + 1</button>
         </form>
         <p>final number: {this.state.number}</p>
+        <Lesson1Child string="abc" number={10} boolean/>
       </React.Fragment>
     );
   }
