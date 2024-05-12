@@ -10,12 +10,17 @@ class Lesson1 extends React.Component {
       hasError: false,
       inputValue: '',
     };
+    this.inputRef = React.createRef();
     console.log('constructor');
   }
 
   incrementNumber = () => {
     this.setState({ number: this.state.number + 1 });
   }
+
+  focusInput = () => {
+    this.inputRef.current.focus();
+  };
 
   handleChange = (event) => {
     this.setState({ inputValue: event.target.value });
@@ -68,6 +73,7 @@ class Lesson1 extends React.Component {
           <input
             value={inputValue}
             onChange={this.handleChange}
+            ref={this.inputRef}
             type="text"
             placeholder="Write 'реакт' here..."/>
           {inputValue === "реакт" && (
@@ -76,6 +82,7 @@ class Lesson1 extends React.Component {
           {inputValue !== "реакт" && (
             <button disabled={false} type="submit" onClick={this.incrementNumber}>Add + 1</button>
           )}
+          <button onClick={this.focusInput}>Focus on input</button>
         </form>
         <p>final number: {this.state.number}</p>
         <Lesson1Child string="abc" number={10} boolean/>
