@@ -5,11 +5,11 @@ class Lesson1Child extends React.Component {
   render() {
     const { string, number, boolean } = this.props;
     return (
-      <div>Lesson1Child
+      <>
         <p className="child">string: {string}</p>
         <p className="child">number: {number}</p>
         <p className="child">boolean: {boolean.toString()}</p>
-      </div>
+      </>
     );
   }
 }
